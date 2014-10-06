@@ -7,24 +7,23 @@
     <!--I am loading the elements just as I would a stylesheet-->
 <!--     <link rel="import" href="/static/bower_components/paper-button/paper-button.html"> -->
     <link rel="import" href="/static/bower_components/google-map/google-map.html">
-    <link rel="import" href="/static/my_custom_elements/pretty-girl/pretty-girl.html">
+    
     <style>
-      body{
-        background-image:url("/static/img/squairy_light.png");
+      html, body {
+        height:100%;
       }
-      .container{
-        margin:0 auto;
-        width:700px;
+      google-map {
+        display: block;
+        height: 100%;
+        width:100%;
       }
     </style>
   </head>
   <body>
-    <!-- page content -->  
-    <div class="container">
-      <ul>
-        <li><h1><a href="/priscilla">pretty-girl element</a></h1></li>
-        <li><h1><a href="/map">google-map element</a></h1></li>
-      </ul>     
-    </div>
+
+    <h2>San Antonio | My hometown</h2>
+
+    <google-map latitude="29.4167" longitude="-98.5000" zoom="14"></google-map>
+  
   </body>
 </html>
