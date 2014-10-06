@@ -6,7 +6,14 @@ polymer requires an http server because ?????? fill this in. So in this example 
 activate virtualenv 
 `source pyenv/bin/activate`
 
+install flask 
+`pip install -r requirements.txt`
+
 start http server 
 `python server.py`
+
+
+
+
 
 visit http://localhost:8000 in your browser. 
