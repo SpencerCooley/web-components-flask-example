@@ -1,7 +1,7 @@
 # a simple example of creating custom elements using polymer 
 
 
-polymer requires an http server because ?????? fill this in. So in this example I am using flask. 
+polymer requires an http server to run which is why I am using flask.
 
 activate virtualenv 
 `source pyenv/bin/activate`
