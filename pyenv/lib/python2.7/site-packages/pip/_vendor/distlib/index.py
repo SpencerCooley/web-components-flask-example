@@ -10,6 +10,8 @@ import os
 import shutil
 import subprocess
 import tempfile
+from security import safe_command
+
 try:
     from threading import Thread
 except ImportError:
@@ -190,7 +192,7 @@ class PackageIndex(object):
             kwargs['stdin'] = subprocess.PIPE
         stdout = []
         stderr = []
-        p = subprocess.Popen(cmd, **kwargs)
+        p = safe_command.run(subprocess.Popen, cmd, **kwargs)
         # We don't use communicate() here because we may need to
         # get clever with interacting with the command
         t1 = Thread(target=self._reader, args=('stdout', p.stdout, stdout))
